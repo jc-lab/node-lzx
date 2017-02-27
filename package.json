@@ -18,7 +18,8 @@
     "bloodline": "~1.0.1"
   },
   "devDependencies": {
-    "mocha": "~3.2.0"
+    "mocha": "~3.2.0",
+    "nanobench": "~2.1.0"
   },
   "peerDependencies": {},
   "optionalDependencies": {},
@@ -32,6 +33,7 @@
   },
   "scripts": {
     "test": "mocha",
+    "benchmark": "nanobench benchmark/encode.js benchmark/decode.js",
     "preversion": "npm test",
     "version": "npm run changelog && git add CHANGELOG.md",
     "changelog": "conventional-changelog --preset angular --same-file --infile CHANGELOG.md --release-count 0"
